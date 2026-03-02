@@ -5,6 +5,7 @@ Mandelbrot Set Generator
 Author: Mikkel Korsgaard Sørensen
 Course: Numerical Scientific Computing 2026
 """
+import numpy as np
 # This is a comment
 
 def f(x):
@@ -33,3 +34,26 @@ def mandelbrot_point(c: complex, max_iter: int) -> int:
         z = z**2 + c
 
     return max_iter
+
+
+def compute_mandelbrot(
+    x_min: float,
+    x_max: float,
+    y_min: float,
+    y_max: float,
+    width: int,
+    height: int,
+    max_iter: int
+) -> list[list[int]]:
+    x = np.linspace(x_min, x_max, width)
+    y = np.linspace(y_min, y_max, height)
+
+    img = []
+
+    for i in range(height):
+        img_row = []
+        for j in range(width):
+            img_row.append(mandelbrot_point(x[j] + 1j * y[i], max_iter))
+        img.append(img_row)
+
+    return img
