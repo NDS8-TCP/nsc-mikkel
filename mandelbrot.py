@@ -5,7 +5,7 @@ Mandelbrot Set Generator
 Author: Mikkel Korsgaard Sørensen
 Course: Numerical Scientific Computing 2026
 """
-
+# This is a comment
 
 def f(x):
     """
