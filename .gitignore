@@ -1,2 +1,5 @@
+# ignore python cache
 __pycache__
+
+# ignore temp python profile files
 *.prof
