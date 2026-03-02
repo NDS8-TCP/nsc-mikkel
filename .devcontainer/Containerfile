@@ -1,0 +1,16 @@
+# https://github.com/conda-forge/miniforge-images?tab=readme-ov-file#miniforge-images
+# Note that the most recent images are no longer on docker.io
+FROM quay.io/condaforge/miniforge3:25.11.0-1
+
+COPY ../environment.yaml /tmp/environment.yaml
+
+# Make mamba and conda commands available in the shell
+RUN mamba shell init --shell bash
+
+# https://github.com/conda-forge/miniforge?tab=readme-ov-file#usage
+RUN mamba env create --file /tmp/environment.yaml \
+    && rm /tmp/environment.yaml \
+    && mamba clean --all --yes
+
+# Use the nsc environment instead of base, in all subsequent shells
+RUN echo "mamba activate nsc" >> /root/.bashrc

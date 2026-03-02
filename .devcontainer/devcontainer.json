@@ -1,0 +1,28 @@
+// https://containers.dev/implementors/json_reference/
+{
+    "name": "nsc",
+
+    // Image specific properties
+    "build": {
+        "dockerfile": "Containerfile", 
+        "context": ".." // Use the project root dir instead of .devcontainer
+    },
+
+    // Mount the source code to /ncs instead of its default
+    "workspaceMount": "source=${localWorkspaceFolder},target=/ncs,type=bind", 
+    "workspaceFolder": "/ncs",
+
+    // Tool-specific properties
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "ms-python.vscode-pylance",
+                "ms-python.isort",
+                "ms-python.debugpy",
+                "ms-python.autopep8",
+                "ms-azuretools.vscode-containers"
+            ]
+        }
+    }
+}
