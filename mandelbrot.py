@@ -1,0 +1,25 @@
+# Template from slide 30, lecture 01
+"""
+Mandelbrot Set Generator
+
+Author: Mikkel Korsgaard Sørensen
+Course: Numerical Scientific Computing 2026
+"""
+
+
+def f(x):
+    """
+    Example function.
+
+    Parameters
+    ----------
+    x : float
+        Input value
+
+    Returns
+    -------
+    float
+        Output value
+    """
+    # TODO: Implement the algorithm
+    pass
