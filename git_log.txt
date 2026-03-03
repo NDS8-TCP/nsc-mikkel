@@ -1,0 +1,128 @@
+2026-03-03 f5c6be1 add readme
+
+ README.md | 93 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 93 insertions(+)
+2026-03-03 cfd2203 mp1: compile plus header and footer
+
+ compile_mp1.py   | 20 ++++++++++++++++++
+ mp1_footer.ipynb | 30 +++++++++++++++++++++++++++
+ mp1_header.ipynb | 63 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 3 files changed, 113 insertions(+)
+2026-03-03 96a03a0 mp: add compiling mini projects
+
+ .devcontainer/Containerfile | 13 ++++++++++++-
+ compile_miniproject.py      | 30 ++++++++++++++++++++++++++++++
+ environment.yaml            |  2 ++
+ 3 files changed, 44 insertions(+), 1 deletion(-)
+2026-03-02 f044a14 updated gitignore with comments
+
+ .gitignore | 3 +++
+ 1 file changed, 3 insertions(+)
+2026-03-02 654a9c6 gitignore temp .prof files
+
+ .gitignore         |   3 ++-
+ naive_profile.prof | Bin 2524 -> 0 bytes
+ numpy_profile.prof | Bin 5174 -> 0 bytes
+ 3 files changed, 2 insertions(+), 1 deletion(-)
+2026-03-02 0ed52a0 add license
+
+ LICENSE | 21 +++++++++++++++++++++
+ 1 file changed, 21 insertions(+)
+2026-03-02 877a58c l03: done
+
+ l03_exercises.ipynb     | 453 ++++++++++++++++++++++++++++++++++++++++++++++++
+ l03_mandelbrot_set.json |   1 +
+ 2 files changed, 454 insertions(+)
+2026-03-02 b80c904 l03: milestone 4 done
+
+ l03_exercises.ipynb      | 369 +++++++++++++++++++++++++++++++++++++++++++++++
+ precision_comparison.png | Bin 0 -> 82695 bytes
+ 2 files changed, 369 insertions(+)
+2026-03-02 51f9e7f l03: milestone 3 done
+
+ l03_exercises.ipynb | 60 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 60 insertions(+)
+2026-03-02 f18e865 l03: milestone 3 almost done
+
+ l03_exercises.ipynb | 136 ++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 136 insertions(+)
+2026-03-02 da202ef l03: milestone 2 done
+
+ l03_exercises.ipynb | 128 ++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 128 insertions(+)
+2026-03-02 d2a0bf1 l03: milestone 2, half done
+
+ environment.yaml    |   1 +
+ l03_exercises.ipynb | 365 ++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 366 insertions(+)
+2026-03-02 822e749 l03: milestone 1, half done
+
+ l03_exercises.ipynb | 581 ++++++++++++++++++++++++++++++++++++++++++++++++++++
+ naive_profile.prof  | Bin 0 -> 2524 bytes
+ numpy_profile.prof  | Bin 0 -> 5174 bytes
+ 3 files changed, 581 insertions(+)
+2026-03-02 16c0f17 l02: exercises done
+
+ l02_exercises.ipynb     | 625 ++++++++++++++++++++++++++++++++++++++++++++++++
+ l02_memory_profile.png  | Bin 0 -> 24830 bytes
+ l02_memory_profiling.py |  25 ++
+ 3 files changed, 650 insertions(+)
+2026-03-02 9c03423 l02: milestone 4 done
+
+ l02_exercises.ipynb | 151 ++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 151 insertions(+)
+2026-03-02 e9170ce l02: milestone 3 done
+
+ l02_exercises.ipynb | 202 ++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 202 insertions(+)
+2026-03-02 1a6d4b1 l02: milestone 2 done
+
+ l02_exercises.ipynb | 119 ++++++++++++++++++++++++++++++++++++++++++++++++++++
+ mandelbrot.py       |  27 ++++++++++++
+ 2 files changed, 146 insertions(+)
+2026-03-02 f7dcc4c l02: milestone 1 done
+
+ l02_exercises.ipynb | 504 ++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 504 insertions(+)
+2026-03-02 4bbaeed add gitignore
+
+ .gitignore | 1 +
+ 1 file changed, 1 insertion(+)
+2026-03-02 4251b02 devcontainer: add environment
+
+ .devcontainer/Containerfile     |  16 +++
+ .devcontainer/devcontainer.json |  28 +++++
+ environment.yaml                | 240 ++++++++++++++++++++++++++++++++++++++++
+ 3 files changed, 284 insertions(+)
+2026-03-02 c98ea3c l01: exercises done
+
+ hot.png             | Bin 0 -> 54864 bytes
+ l01_exercises.ipynb | 168 ++++++++++++++++++++++++++++++++++++++++++++++++++--
+ test_install.py     |  13 ++++
+ twilight.png        | Bin 0 -> 65096 bytes
+ viridis.png         | Bin 0 -> 60351 bytes
+ 5 files changed, 177 insertions(+), 4 deletions(-)
+2026-03-02 16370fd Add notebook lecture 1, performance measure
+
+ l01_exercises.ipynb | 3377 +++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 3377 insertions(+)
+2026-03-02 1676717 Add mandelbrot compute python
+
+ mandelbrot.py | 24 ++++++++++++++++++++++++
+ 1 file changed, 24 insertions(+)
+2026-03-02 19089dd Add mandelbrot point implementation
+
+ mandelbrot.py | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+2026-03-02 a00914d Add TODO comment
+
+ mandelbrot.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+2026-03-02 f9c732b Add mandelbrot skeleton
+
+ mandelbrot.py | 25 +++++++++++++++++++++++++
+ 1 file changed, 25 insertions(+)
+2026-03-02 42cc8c4 Add Python environment specification
+
+ environment.yml | 240 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 240 insertions(+)
