@@ -1,3 +1,23 @@
+2026-03-03 ed83f4d mp1: done with git logs
+
+ git_log.txt | 8 ++++++++
+ 1 file changed, 8 insertions(+)
+2026-03-03 d0a88bd mp1: final formatting
+
+ mp1_header.ipynb | 4 ++++
+ 1 file changed, 4 insertions(+)
+2026-03-03 b3240c2 mp1: fixed failed to compile tables bug
+
+ environment.yaml | 2 ++
+ 1 file changed, 2 insertions(+)
+2026-03-03 159a53c mp1: include comment regarding git comments
+
+ mp1_header.ipynb | 8 ++++++++
+ 1 file changed, 8 insertions(+)
+2026-03-03 c8b6e47 mp1: include git logs
+
+ git_log.txt | 128 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 128 insertions(+)
 2026-03-03 f5c6be1 add readme
 
  README.md | 93 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
