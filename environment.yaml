@@ -157,6 +157,8 @@ dependencies:
   - msgpack-python=1.1.2=py311hdf67eae_1
   - munkres=1.1.4=pyhd8ed1ab_1
   - narwhals=2.16.0=pyhcf101f3_0
+  - nbconvert=7.17.0=h14065e2_0
+  - nbmerge=0.0.4=pyhd8ed1ab_1
   - ncurses=6.5=h2d0b736_3
   - nlohmann_json=3.12.0=h54a6638_1
   - numba=0.63.1=py311h3c884d5_0

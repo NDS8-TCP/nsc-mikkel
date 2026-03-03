@@ -14,3 +14,14 @@ RUN mamba env create --file /tmp/environment.yaml \
 
 # Use the nsc environment instead of base, in all subsequent shells
 RUN echo "mamba activate nsc" >> /root/.bashrc
+
+# https://nbconvert.readthedocs.io/en/v7.17.0/install.html
+# So that we can export miniprojects to pdf
+# It seesm like this miniforge3 image is based on ubuntu, so use apt
+ENV DEBIAN_FRONTEND=noninteractive
+
+RUN apt update && apt install -y \ 
+    texlive-xetex \
+    texlive-fonts-recommended \
+    texlive-plain-generic \
+    && rm -rf /var/lib/apt/lists/*
