@@ -2,6 +2,7 @@
 1. Course Intro and Development Tools
 2. Computer Architecture and Memory
 3. Optimization and Numba
+4. Parallel Computing 1 — Peer Review MP1, Amdahl's Law & Multiprocessing
 
 ## Compiling a mini project
 In order to compile a specific mini project, such as mp1, simply execute the 
