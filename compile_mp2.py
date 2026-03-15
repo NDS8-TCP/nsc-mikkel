@@ -8,7 +8,7 @@ def main():
     notebooks_mp1: list[Path] = [
         # base_dir / "mp2_header.ipynb",
         base_dir / "l04_exercises.ipynb",
-        #base_dir / "l05_exercises.ipynb",
+        base_dir / "l05_exercises.ipynb",
         #base_dir / "l06_exercises.ipynb",
         #base_dir / "mp2_footer.ipynb"
     ]
