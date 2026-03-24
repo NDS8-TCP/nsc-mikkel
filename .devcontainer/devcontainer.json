@@ -12,6 +12,9 @@
     "workspaceMount": "source=${localWorkspaceFolder},target=/ncs,type=bind", 
     "workspaceFolder": "/ncs",
 
+    // Port forward, used for lecture 6 dask dashboard
+    "forwardPorts": [8787],
+
     // Tool-specific properties
     "customizations": {
         "vscode": {
