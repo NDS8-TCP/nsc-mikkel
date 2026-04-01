@@ -9,3 +9,6 @@ nsc
 
 # Ignore public keys
 nsc.pub
+
+# ignore mp4 videos
+*.mp4
