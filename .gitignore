@@ -3,3 +3,9 @@ __pycache__
 
 # ignore temp python profile files
 *.prof
+
+# ignore private keys
+nsc
+
+# Ignore public keys
+nsc.pub
