@@ -204,6 +204,7 @@ dependencies:
   - six=1.17.0=pyhe01879c_1
   - snappy=1.2.2=h03e3b7b_1
   - sortedcontainers=2.4.0=pyhd8ed1ab_1
+  - tabulate=0.10.0=pyhcf101f3_0
   - tblib=3.2.2=pyhcf101f3_0
   - tk=8.6.13=noxft_h366c992_103
   - tomli=2.4.0=pyhcf101f3_0
