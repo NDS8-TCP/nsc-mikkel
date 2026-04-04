@@ -1,7 +1,193 @@
-2026-03-03 ed83f4d mp1: done with git logs
+2026-04-04 07248ac mp2: done with logs
 
- git_log.txt | 8 ++++++++
- 1 file changed, 8 insertions(+)
+ mp2.ipynb        | 4050 ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ mp2.pdf          |  Bin 0 -> 690502 bytes
+ mp2_footer.ipynb |  108 ++
+ mp2_header.ipynb |   53 +
+ mp2_strato.ipynb | 2001 +++++++++++++++++++++++++++
+ mp2_strato.pdf   |  Bin 0 -> 517355 bytes
+ 6 files changed, 6212 insertions(+)
+2026-04-04 b8bb756 mp2: updated compile script
+
+ compile_mp2.py | 21 +++++++++++++++------
+ 1 file changed, 15 insertions(+), 6 deletions(-)
+2026-04-04 06a4356 mp2: include section two computations and results
+
+ mp2_section2.csv   |   5 ++
+ mp2_section2.ipynb | 209 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 214 insertions(+)
+2026-04-04 4c819ba updated environment to compile tables in PDFs
+
+ environment.yaml | 1 +
+ 1 file changed, 1 insertion(+)
+2026-04-03 bebb533 mp2: split milestones and exercises to their own files
+
+ l04_exercises.ipynb  |  979 --------------------------------------------
+ l04_milestones.ipynb | 1012 +++++++++++++++++++++++++++++++++++++++++++++
+ l05_exercises.ipynb  | 1078 ------------------------------------------------
+ l05_milestones.ipynb | 1111 ++++++++++++++++++++++++++++++++++++++++++++++++++
+ l06_exercises.ipynb  |  812 ------------------------------------
+ l06_milestones.ipynb |  845 ++++++++++++++++++++++++++++++++++++++
+ l07_exercises.ipynb  |  810 ------------------------------------
+ l07_milestones.ipynb |  843 ++++++++++++++++++++++++++++++++++++++
+ 8 files changed, 3811 insertions(+), 3679 deletions(-)
+2026-04-03 25daf07 l07: exercise 3 done
+
+ l07_ex3.csv                |   7 ++
+ l07_ex3_mandelbrot_dask.py |  80 +++++++++++++++++++++
+ l07_exercises.ipynb        | 174 +++++++++++++++++++++++++++++++++++++++++++++
+ 3 files changed, 261 insertions(+)
+2026-04-01 ab90fad l07: exercise 2 done
+
+ .gitignore                 |  5 ++-
+ l07_ex2_mandelbrot_dask.py | 89 ++++++++++++++++++++++++++++++++++++++++++++++
+ l07_exercises.ipynb        | 82 ++++++++++++++++++++++++++++++++++++++++++
+ 3 files changed, 175 insertions(+), 1 deletion(-)
+2026-04-01 5978d4e l07: milestone 1 done
+
+ l07_exercises.ipynb | 669 +++++++++++++++++++++++++++++++++++++++++++++++++++-
+ l07_ms1.csv         |   7 +
+ 2 files changed, 675 insertions(+), 1 deletion(-)
+2026-04-01 7c727cd l07: exercise 1 done
+
+ .gitignore                  |    8 +-
+ l07_part3.csv               |   19 +
+ l07_part5.csv               |   19 +
+ l07_strato_dask_setup.ipynb | 1480 ++++++++++++++++++++++++++++++++++++++++++-
+ mandelbrot_dask.py          |   88 +++
+ 5 files changed, 1606 insertions(+), 8 deletions(-)
+2026-03-26 10bdfa9 l07: exercise 1 template
+
+ l07_strato_dask_setup.ipynb | 535 ++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 535 insertions(+)
+2026-03-26 ecf18a2 l07: exercises template
+
+ l07_exercises.ipynb | 357 ++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 357 insertions(+)
+2026-03-25 bc96fe8 l06: milestone 3 done
+
+ l06_exercises.ipynb | 67 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 67 insertions(+)
+2026-03-25 9b8dd13 l06: milestone 2 done
+
+ dask_chunk_sweep.png | Bin 0 -> 25520 bytes
+ l06_exercises.ipynb  | 373 ++++++++++++++++++++++++++++++++++++++++++++++++++-
+ l06_milestone1.csv   |   7 +
+ 3 files changed, 378 insertions(+), 2 deletions(-)
+2026-03-24 3453c85 l06: milestone 1 done
+
+ l06_exercises.ipynb | 112 +++++++++++++++++++++++++++++++++++++++++++++++++---
+ 1 file changed, 107 insertions(+), 5 deletions(-)
+2026-03-24 0591d5f env: updated devcontainer with dask dashboard port forward
+
+ .devcontainer/devcontainer.json | 3 +++
+ 1 file changed, 3 insertions(+)
+2026-03-24 bb54e10 l06: exercise 3 done
+
+ l06_exercises.ipynb     | 103 +++++++++++++++++++++++++++++++++++++++++++++++-
+ task_graph_pipeline.png | Bin 0 -> 237797 bytes
+ 2 files changed, 101 insertions(+), 2 deletions(-)
+2026-03-23 ceae2bd l06: exercise 2 done
+
+ l06_exercises.ipynb | 277 +++++++++++++++++++++++++++++++++++++++++++++++++++-
+ 1 file changed, 275 insertions(+), 2 deletions(-)
+2026-03-22 ad3b584 l06: exercise 1 done
+
+ l06_ex1_res.npz     | Bin 0 -> 874 bytes
+ l06_exercises.ipynb | 232 +++++++++++++++++++++++++++++++++++++++++++++++++++-
+ task_graph.png      | Bin 0 -> 51973 bytes
+ 3 files changed, 229 insertions(+), 3 deletions(-)
+2026-03-22 d18648a update dev environment
+
+ .devcontainer/devcontainer.json | 4 +++-
+ environment.yaml                | 3 +++
+ 2 files changed, 6 insertions(+), 1 deletion(-)
+2026-03-22 0a347c1 l06: exercises template
+
+ l06_exercises.ipynb | 691 ++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 691 insertions(+)
+2026-03-15 81e8038 mp2: wip, updated compile script
+
+ compile_mp2.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+2026-03-15 2ae7f68 l05: include results .csv
+
+ l05_milestone2.csv |  6 ++++++
+ l05_milestone3.csv | 17 +++++++++++++++++
+ 2 files changed, 23 insertions(+)
+2026-03-15 5f24b48 l05: milestone 3 done
+
+ l05_exercises.ipynb | 271 +++++++++++++++++++++++++++++++++++++++++++++++++++-
+ 1 file changed, 267 insertions(+), 4 deletions(-)
+2026-03-15 a919d4d l05: milestone 2 done
+
+ l05_exercises.ipynb | 251 ++++++++++++++++++++++++++++++++++++++++++++++++++--
+ 1 file changed, 245 insertions(+), 6 deletions(-)
+2026-03-15 58d86c6 l05: milestone 1 done
+
+ l05_exercises.ipynb | 300 ++++++++++++++++++++++++++++++++++++++++++++++++++--
+ 1 file changed, 292 insertions(+), 8 deletions(-)
+2026-03-15 223f8f1 l05: exercise 2 done + touch-ups on exercise 1
+
+ l05_exercises.ipynb | 142 ++++++++++++++++++++++++++++++++++++++++++++++++----
+ 1 file changed, 133 insertions(+), 9 deletions(-)
+2026-03-15 bfa90bc l05: exercise 1 done
+
+ l05_ex1_res.npz     | Bin 0 -> 610 bytes
+ l05_exercises.ipynb | 185 +++++++++++++++++++++++++++++++++++++++++++++++++++-
+ 2 files changed, 183 insertions(+), 2 deletions(-)
+2026-03-12 5167173 l05: exercises template
+
+ l05_exercises.ipynb | 637 ++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 637 insertions(+)
+2026-03-08 8440d49 update readme
+
+ README.md | 1 +
+ 1 file changed, 1 insertion(+)
+2026-03-08 9af3f0b mp2: initial compile script
+
+ compile_mp2.py | 21 +++++++++++++++++++++
+ 1 file changed, 21 insertions(+)
+2026-03-08 6a31e22 l04: touchups
+
+ l04_exercises.ipynb | 122 +++++++++++++++++++++++++++++++++++++++++++++++++---
+ 1 file changed, 116 insertions(+), 6 deletions(-)
+2026-03-08 1e3062e l04: milestone 3 done
+
+ l04_exercises.ipynb | 495 +++++++++++++++++++++++++++++++++++++++++++++++-----
+ l04_milestone3.csv  |  17 ++
+ 2 files changed, 465 insertions(+), 47 deletions(-)
+2026-03-06 448ec4e l04: milestone 2 done
+
+ l04_exercises.ipynb | 70 +++++++++++++++++++++++++++++++++++++++++++++++------
+ 1 file changed, 62 insertions(+), 8 deletions(-)
+2026-03-06 6370d82 l04: milestone 1 done
+
+ l04_exercises.ipynb | 129 +++++++++++++++++++++++++++++++++++++++++++++++++---
+ 1 file changed, 122 insertions(+), 7 deletions(-)
+2026-03-06 9bc545a l03: fixed indent error
+
+ l03_exercises.ipynb | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+2026-03-06 8884ab9 l04: persistent exercise 1, 2, and 3
+
+ l04_exercises.ipynb | 272 +++++++++++++++++++++++++++++++++++++++++++++-------
+ l04_results.npy     | Bin 0 -> 256 bytes
+ 2 files changed, 240 insertions(+), 32 deletions(-)
+2026-03-05 c9e9dc4 l04: exercise 2 done
+
+ l04_exercises.ipynb | 56 +++++++++++++++++++++++++++++++++++++++++++++++++----
+ 1 file changed, 52 insertions(+), 4 deletions(-)
+2026-03-05 268a731 l04: exercise 1 done
+
+ l04_exercises.ipynb | 687 ++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 687 insertions(+)
+2026-03-03 3efb880 mp1: done with git logs
+
+ git_log.txt |   20 +
+ mp1.ipynb   | 7255 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ mp1.pdf     |  Bin 0 -> 1154782 bytes
+ 3 files changed, 7275 insertions(+)
 2026-03-03 d0a88bd mp1: final formatting
 
  mp1_header.ipynb | 4 ++++
