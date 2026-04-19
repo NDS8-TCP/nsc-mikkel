@@ -15,3 +15,6 @@ nsc.pub
 
 # ignore pytest coverage files
 .coverage
+
+# ignore mutmut mutants
+mutants
