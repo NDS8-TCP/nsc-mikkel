@@ -217,6 +217,7 @@ dependencies:
   - requests=2.33.1=pyhcf101f3_0
   - rich=15.0.0=pyhcf101f3_0
   - roman-numerals=4.1.0=pyhd8ed1ab_0
+  - ruff=0.15.11=h7805a7d_0
   - s2n=1.6.2=he8a4886_1
   - scipy=1.17.0=py311hbe70eeb_1
   - setuptools=81.0.0=pyh332efcf_0
