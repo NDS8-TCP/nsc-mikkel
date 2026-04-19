@@ -12,3 +12,6 @@ nsc.pub
 
 # ignore mp4 videos
 *.mp4
+
+# ignore pytest coverage files
+.coverage
