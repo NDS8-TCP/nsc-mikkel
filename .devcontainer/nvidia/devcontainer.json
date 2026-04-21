@@ -1,11 +1,18 @@
 // https://containers.dev/implementors/json_reference/
 {
-    "name": "nsc",
+    "name": "nsc-nvidia",
 
     // Image specific properties
     "build": {
-        "dockerfile": "Containerfile", 
-        "context": ".." // Use the project root dir instead of .devcontainer
+        "dockerfile": "../Containerfile", 
+        "context": "../..", // Use the project root dir instead of .devcontainer
+        "args": {
+             // Omit for no opencl ICDs
+            "OPENCL_SUPPORT": "1",
+
+            // Supported platforms: intel-x86_64, cpu, nvidia, amd, intel
+            "OPENCL_PLATFORM": "intel-x86_64 nvidia"
+        }
     },
 
     // Mount the source code to /ncs instead of its default
@@ -29,5 +36,11 @@
                 "streetsidesoftware.code-spell-checker"
             ]
         }
-    }
+    },
+
+    // Allow GPU access via the CDI interface
+    // NVIDIA
+    "runArgs": [
+        "--device", "nvidia.com/gpu=all"
+    ]
 }

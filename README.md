@@ -92,3 +92,15 @@ Note that both offer a desktop GUI.
 - [Docker Engine](https://docs.docker.com/engine/install/)
 - [Podman](https://podman.io/docs/installation)
 
+
+### Configuring GPU access (OpenCL)
+Copy in host specific ICDs: `cp --archive /etc/OpenCL/vendors opencl-vendors`
+> EDIT AND REMOVE ICD FOR INTEL(CPU) AND AMD. These are provided via the container.
+
+#### NVIDIA
+1. Install their [container toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html).
+2. Generate CDI: `sudo nvidia-ctk cdi generate --output=/etc/cdi/nvidia.yaml`
+
+#### AMD
+1. Install their [container toolkit](https://instinct.docs.amd.com/projects/container-toolkit/en/latest/container-runtime/cdi-guide.html)
+2. Generate CDI: `sudo amd-ctk cdi generate --output=/etc/cdi/amd.json`

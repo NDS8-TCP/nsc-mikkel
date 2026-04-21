@@ -18,3 +18,7 @@ nsc.pub
 
 # ignore mutmut mutants
 mutants
+
+# opencl vendors. we must keep only the dir
+opencl-vendors/*
+!opencl-vendors/*.gitkeep

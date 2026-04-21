@@ -1,6 +1,8 @@
 # https://github.com/conda-forge/miniforge-images?tab=readme-ov-file#miniforge-images
 # Note that the most recent images are no longer on docker.io
 FROM quay.io/condaforge/miniforge3:25.11.0-1
+ARG OPENCL_SUPPORT
+ARG OPENCL_PLATFORM
 
 COPY ../environment.yaml /tmp/environment.yaml
 
@@ -17,11 +19,56 @@ RUN echo "mamba activate nsc" >> /root/.bashrc
 
 # https://nbconvert.readthedocs.io/en/v7.17.0/install.html
 # So that we can export miniprojects to pdf
-# It seesm like this miniforge3 image is based on ubuntu, so use apt
-ENV DEBIAN_FRONTEND=noninteractive
-
+# It seems like this miniforge3 image is based on ubuntu, so use apt
+# also include clinfo.
 RUN apt update && apt install -y \ 
     texlive-xetex \
     texlive-fonts-recommended \
     texlive-plain-generic \
-    && rm -rf /var/lib/apt/lists/*
+    clinfo \
+    gpg
+
+# OpenCL
+COPY ../opencl-vendors /etc/OpenCL/vendors
+RUN if [ -n "$OPENCL_SUPPORT" ]; then \
+        for platform in $OPENCL_PLATFORM; do \
+            case "$platform" in \
+                intel-x86_64) echo "intel-x86_64 elected" && \
+                    # download the key to system keyring
+                    wget -O- https://apt.repos.intel.com/intel-gpg-keys/GPG-PUB-KEY-INTEL-SW-PRODUCTS.PUB \
+                    | gpg --dearmor | tee /usr/share/keyrings/oneapi-archive-keyring.gpg > /dev/null && \
+                    # add signed entry to apt sources and configure the APT client to use Intel repository
+                    echo "deb [signed-by=/usr/share/keyrings/oneapi-archive-keyring.gpg] https://apt.repos.intel.com/oneapi all main" \
+                    |  tee /etc/apt/sources.list.d/oneAPI.list && \
+                    # install
+                    apt update && apt install -y \
+                        intel-oneapi-runtime-opencl ;; \
+                cpu) echo "CPU selected" && \
+                    apt install -y \
+                        pocl-opencl-icd ;; \
+                nvidia) echo "NVIDIA selected" ;; \
+                amd) echo "AMD selected" && \
+                    # https://github.com/devcontainers/cli/pull/311
+                    # devcontainer does not support extends "yet" - so we must copy
+                    # https://instinct.docs.amd.com/projects/container-toolkit/en/latest/container-runtime/requirements.html#docker-compatibility
+                    # AMD should support injecting the need libs for rocm and opencl to work
+                    # but this is currently only supported on docker on ubuntu
+                    # Therefore install the libs on the container side
+                    # https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/install-methods/package-manager/package-manager-ubuntu.html
+                    wget https://repo.radeon.com/rocm/rocm.gpg.key -O - \
+                    | gpg --dearmor | tee /etc/apt/keyrings/rocm.gpg > /dev/null && \
+                    echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/rocm.gpg] https://repo.radeon.com/rocm/apt/7.2.2 noble main" \
+                     | tee /etc/apt/sources.list.d/rocm.list && \
+                    echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/rocm.gpg] https://repo.radeon.com/graphics/7.2.1/ubuntu noble main" \
+                    | tee -a /etc/apt/sources.list.d/rocm.list && \
+                    apt update && apt install -y \
+                        rocm-opencl-runtime ;; \
+                intel) echo "INTEL selected" && \
+                    # Currently not supported
+                    exit 1 ;; \
+                *) echo "Unknown OpenCL platform: $platform" ;; \
+            esac; \
+        done; \
+    fi 
+
+RUN rm -rf /var/lib/apt/lists/*
