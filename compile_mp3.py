@@ -7,8 +7,8 @@ def main():
     notebooks: list[Path] = [
         base_dir / "mp3_header.ipynb",
         base_dir / "l08_milestones.ipynb",
-        #base_dir / "l09_milestones.ipynb",
-        #base_dir / "l10_milestones.ipynb",
+        base_dir / "l09_milestones.ipynb",
+        base_dir / "l10_milestones.ipynb",
         base_dir / "mp3_footer.ipynb"
     ]
     mp3 = "mp3"
