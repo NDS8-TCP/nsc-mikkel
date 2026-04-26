@@ -27,6 +27,20 @@ def f(x):
 
 
 def mandelbrot_point(c: complex, max_iter: int) -> int:
+    """Computes the escape iteration count for a single point in the mandelbrot set.
+    
+    Parameters
+    ----------
+    c : complex 
+        The complex coordinate to test in the Mandelbrot iteration.
+    max_iter : int
+        Maximum number of iterations to perform.
+    
+    Returns
+    -------
+    int
+        Number of iterations computed. 
+    """
     z = 0j
     for n in range(max_iter):
         if abs(z) > 2:
@@ -45,6 +59,30 @@ def compute_mandelbrot(
     height: int,
     max_iter: int
 ) -> list[list[int]]:
+    """Computes the mandelbrot set for a rectangular defined region.
+    
+    Parameters
+    ----------
+    x_min : float
+        Minimum x-value (left boundary) of the complex plane.
+    x_max : float
+        Maximum x-value (right boundary) of the complex plane.
+    y_min : float
+        Minimum y-value (bottom boundary) of the complex plane.
+    y_max : float
+        Maximum y-value (top boundary) of the complex plane.
+    width : int
+        Number of pixels to compute width wise.
+    height : int
+        Number of pixels to compute height wise.
+    max_iter : int
+        Maximum number of iterations per pixel.
+    
+    Returns
+    -------
+    list[list[int]]
+        A Python matrix (height x width) with iteration counts per pixel.
+    """
     x = np.linspace(x_min, x_max, width)
     y = np.linspace(y_min, y_max, height)
 
@@ -68,6 +106,30 @@ def compute_mandelbrot_numpy(
     height: int,
     max_iter: int
 ):
+    """Computes the mandelbrot set for a rectangular defined region.
+    
+    Parameters
+    ----------
+    x_min : float
+        Minimum x-value (left boundary) of the complex plane.
+    x_max : float
+        Maximum x-value (right boundary) of the complex plane.
+    y_min : float
+        Minimum y-value (bottom boundary) of the complex plane.
+    y_max : float
+        Maximum y-value (top boundary) of the complex plane.
+    width : int
+        Number of pixels to compute width wise.
+    height : int
+        Number of pixels to compute height wise.
+    max_iter : int
+        Maximum number of iterations per pixel.
+    
+    Returns
+    -------
+    NDArray[int]
+        A numpy matrix (height x width) with iteration counts per pixel.
+    """
     # Inspired by slide 30, lecture 02
     x = np.linspace(x_min, x_max, width)
     y = np.linspace(y_min, y_max, height)
