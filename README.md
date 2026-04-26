@@ -1,8 +1,4 @@
 # P8: Numerical Scientific Computing
-1. Course Intro and Development Tools
-2. Computer Architecture and Memory
-3. Optimization and Numba
-4. Parallel Computing 1 — Peer Review MP1, Amdahl's Law & Multiprocessing
 
 ## Compiling a mini project
 In order to compile a specific mini project, such as mp1, simply execute the 
@@ -12,7 +8,7 @@ single notebook and pdf.
 ## Instalment
 You can install and run using the following options:
 1. Using devcontainer [*OCI Container*] (**Recommended**)
-2. Using podman/docker interactively via the CLI [*OCI Container*]
+2. Using podman/docker interactively via the CLI [*OCI Container*] (Untested)
 3. Using host OS [*OCI Container less*] (Untested)
 
 ### 1. Using devcontainers via VS Code
@@ -43,44 +39,9 @@ Go to extensions -> Search "Container Tools" -> Install
 #### 3. Start the dev container
 Ctrl + Shift + P -> "Dev Containers: Reopen in Container"
 
-Note that the first container build can take about 2 minutes. You can follow 
+Note that the first container build can take about 4 minutes. You can follow 
 the process by clicking on the "(Show logs)" in the bottom right corner.
 
-
-### 2. Using `podman` or `docker` CLI
-#### 1. Install either `podman` or `docker` [Official installation guides](#installation-links-for-docker-and-podman)
-Note that the subsequent commands, `podman` can be exchanged with `docker`.
-
-#### 2. Create a (disposable) image.
-Ensure that your current pwd is the root of this repo.
-
-```sh
-podman run --rm -it \
-    --name nsc \
-    --workdir /nsc \
-    --volume .:/nsc \
-    quay.io/condaforge/miniforge3:25.11.0-1 \
-    /usr/bin/bash
-```
-
-#### 3. Make `mamba` and `conda` available in subsequent shells
-```bash
-mamba shell init --shell bash
-```
-Also make then available immediately in this current shell.
-```bash
-eval "$(mamba shell hook --shell bash)"
-```
-
-#### 4. Create the virtual mamba environment
-```bash
-mamba env create --file environment.yaml --yes
-```
-
-#### 5. Activate the virtual mamba environment
-```bash
-mamba activate nsc
-```
 
 ### 3. Using the host OS
 Please see 
@@ -95,7 +56,7 @@ Note that both offer a desktop GUI.
 
 ### Configuring GPU access (OpenCL)
 Copy in host specific ICDs: `cp --archive /etc/OpenCL/vendors opencl-vendors`
-> EDIT AND REMOVE ICD FOR INTEL(CPU) AND AMD. These are provided via the container.
+> EDIT AND REMOVE ICD FOR INTEL(CPU) AND AMD. These are provided via the container runtime.
 
 #### NVIDIA
 1. Install their [container toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html).

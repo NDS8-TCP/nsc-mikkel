@@ -1,12 +1,170 @@
-2026-04-04 07248ac mp2: done with logs
+2026-04-26 c2b9a12 mp3: done
 
+ README.md        |   45 +-
+ mp3.ipynb        | 3729 ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ mp3.pdf          |  Bin 0 -> 510430 bytes
+ mp3_footer.ipynb |  151 ++-
+ mp3_header.ipynb |   45 +-
+ 5 files changed, 3926 insertions(+), 44 deletions(-)
+2026-04-26 3eec747 mp3: add missing numba timings
+
+ mp3_perf_table_missing_entries.py | 36 ++++++++++++++++++++++++++++++++++++
+ 1 file changed, 36 insertions(+)
+2026-04-26 796005b mp3: update compile pdf
+
+ compile_mp3.py | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+2026-04-26 488e2fd mp3: docstrings for all impl
+
+ l02_exercises.ipynb  |  19 ++++-
+ l03_exercises.ipynb  | 206 ++++++++++++++++++++++++++++++++++++++++++++++++++-
+ l04_milestones.ipynb |  91 ++++++++++++++++++++++-
+ l05_milestones.ipynb |  68 +++++++++++++++++
+ l06_milestones.ipynb |  60 +++++++++++++++
+ l07_milestones.ipynb |  14 ++++
+ l08_milestones.ipynb |  27 +++++++
+ l10_exercises.ipynb  |   2 +-
+ l10_milestones.ipynb |  46 +++++++++++-
+ mandelbrot.py        |  62 ++++++++++++++++
+ 10 files changed, 588 insertions(+), 7 deletions(-)
+2026-04-24 b43c592 l10: milestone 3 done
+
+ benchmark_mp3.png    | Bin 0 -> 37259 bytes
+ l10_milestones.ipynb | 327 +++++++++++++++++++++++++++++++++++++++++++++++----
+ 2 files changed, 304 insertions(+), 23 deletions(-)
+2026-04-24 4bedfbd l10: milestone 2 done
+
+ .devcontainer/Containerfile |   1 +
+ l10_milestones.ipynb        | 678 +++++++++++++++++++++++++++++++++++++++++++-
+ 2 files changed, 676 insertions(+), 3 deletions(-)
+2026-04-22 c2d241f l10: milestone 1 done
+
+ l10_milestones.ipynb | 906 ++++++++++++++++++++++++++++++++++++++++++++++++++-
+ mandelbrot_gpu.png   | Bin 0 -> 71087 bytes
+ mandelbrot_gpu.py    |  50 +++
+ 3 files changed, 953 insertions(+), 3 deletions(-)
+2026-04-22 ddfac1c l10: exercise 2 done
+
+ l10_exercises.ipynb | 273 ++++++++++++++++++++++++++++++++++++++++++++++++++--
+ opencl_template.py  |  57 +++++++++++
+ 2 files changed, 323 insertions(+), 7 deletions(-)
+2026-04-22 12cd8d7 l10: exercise 1 done
+
+ l10_exercises.ipynb | 150 +++++++++++++++++++++++++++++++++++++++++++++++++++-
+ 1 file changed, 149 insertions(+), 1 deletion(-)
+2026-04-22 860f6b0 l10: template
+
+ l10_exercises.ipynb  | 182 +++++++++++++++++++++++++++++
+ l10_milestones.ipynb | 323 +++++++++++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 505 insertions(+)
+2026-04-21 fc7a364 l10: prep. must run before the lecture
+
+ basic_test.py                 |  78 ++++++++++++++
+ buddhabrot_simple.png         | Bin 0 -> 830228 bytes
+ buddhabrot_simple_opencl.py   | 175 +++++++++++++++++++++++++++++++
+ iteration_histogram.png       | Bin 0 -> 45909 bytes
+ iteration_histogram_image.png | Bin 0 -> 99658 bytes
+ iteration_histogram_opencl.py | 169 ++++++++++++++++++++++++++++++
+ mandelbrot_opencl.png         | Bin 0 -> 207690 bytes
+ mandelbrot_opencl.py          | 193 +++++++++++++++++++++++++++++++++++
+ mandelbrot_variants.png       | Bin 0 -> 685644 bytes
+ mandelbrot_variants_opencl.py | 232 ++++++++++++++++++++++++++++++++++++++++++
+ workgroup_sweep.png           | Bin 0 -> 46175 bytes
+ workgroup_sweep_opencl.py     | 163 +++++++++++++++++++++++++++++
+ 12 files changed, 1010 insertions(+)
+2026-04-21 fc6bd01 l10: prep for opencl
+
+ .devcontainer/Containerfile                   | 55 +++++++++++++++++++++++++--
+ .devcontainer/amd/devcontainer.json           | 46 ++++++++++++++++++++++
+ .devcontainer/{ => default}/devcontainer.json | 11 +++++-
+ .devcontainer/nvidia/devcontainer.json        | 46 ++++++++++++++++++++++
+ .gitignore                                    |  6 ++-
+ README.md                                     | 12 ++++++
+ environment.yaml                              |  7 ++++
+ opencl-vendors/.gitkeep                       |  0
+ 8 files changed, 176 insertions(+), 7 deletions(-)
+2026-04-19 9cbb5c2 l09: milestone 2 done
+
+ environment.yaml     |   1 +
+ l09_milestones.ipynb | 164 +++++++++++++++++++++++++++++++++++++++++++++++++++
+ your_mandelbrot.py   |  51 ++++++++++++++++
+ 3 files changed, 216 insertions(+)
+2026-04-19 0d86197 l09: milestone 1 done
+
+ l09_milestones.ipynb | 430 ++++++++++++++++++++++++++++++++++++++++++++++++++-
+ test_mandelbrot.py   | 151 ++++++++++++++++++
+ 2 files changed, 579 insertions(+), 2 deletions(-)
+2026-04-19 e455006 l09: exercise 4 done
+
+ .gitignore          |   5 ++-
+ environment.yaml    |  29 +++++++++++++
+ l09_exercise4.py    |  31 +++++++++++++
+ l09_exercises.ipynb | 123 ++++++++++++++++++++++++++++++++++++++++++++++++++++
+ setup.cfg           |   2 +
+ 5 files changed, 189 insertions(+), 1 deletion(-)
+2026-04-19 d80bb0e l09: exercise 3 done
+
+ .gitignore               |   5 +-
+ environment.yaml         |   2 +
+ l09_exercises.ipynb      | 190 +++++++++++++++++++++++++++++++++++++++++++++++
+ mandelbrot_pixel.py      |   9 +++
+ test_mandelbrot_pixel.py |  14 ++++
+ 5 files changed, 219 insertions(+), 1 deletion(-)
+2026-04-19 373b69f l09: exercise 2 done
+
+ l09_exercises.ipynb | 162 ++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 162 insertions(+)
+2026-04-16 96b45f1 l09: exercise 1 done
+
+ l09_ex1_test.py     |  41 ++++++++++++
+ l09_exercises.ipynb | 175 ++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 216 insertions(+)
+2026-04-16 99d2405 l09: template done
+
+ l09_exercises.ipynb  | 519 +++++++++++++++++++++++++++++++++++++++++++++++++++
+ l09_milestones.ipynb | 249 ++++++++++++++++++++++++
+ 2 files changed, 768 insertions(+)
+2026-04-12 d81a280 mp3: initial compile script
+
+ compile_mp3.py   | 21 +++++++++++++++++++++
+ mp3_footer.ipynb | 10 ++++++++++
+ mp3_header.ipynb | 10 ++++++++++
+ 3 files changed, 41 insertions(+)
+2026-04-12 b3a8d0e l08: milestone 2 done
+
+ l08_milestones.ipynb | 112 +++++++++++++++++++++++++++++++++++++++++++--------
+ 1 file changed, 96 insertions(+), 16 deletions(-)
+2026-04-12 3fe9b33 l08: milestone 1 done
+
+ l08_milestones.ipynb | 253 ++++++++++++++++++++++++++++++++++++++++++++++-----
+ 1 file changed, 230 insertions(+), 23 deletions(-)
+2026-04-12 4ded501 l08: exercise 3 done
+
+ l08_exercises.ipynb | 107 +++++++++++++++++++++++++++++++++++++++++++++++++---
+ 1 file changed, 102 insertions(+), 5 deletions(-)
+2026-04-12 93a42a0 l08: exercise 2 done
+
+ l08_exercises.ipynb | 123 +++++++++++++++++++++++++++++++++++++++++++++-------
+ 1 file changed, 107 insertions(+), 16 deletions(-)
+2026-04-12 00a495a l08: exercise 1 done
+
+ l08_exercises.ipynb | 55 +++++++++++++++++++++++++++++++++++++++++++++++++++--
+ 1 file changed, 53 insertions(+), 2 deletions(-)
+2026-04-09 bca57d3 l08: template done
+
+ l08_exercises.ipynb  | 274 +++++++++++++++++++++++++++++++++++++++++++++++++++
+ l08_milestones.ipynb | 229 ++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 503 insertions(+)
+2026-04-04 92fddf5 mp2: done with logs
+
+ git_log.txt      |  192 ++-
  mp2.ipynb        | 4050 ++++++++++++++++++++++++++++++++++++++++++++++++++++++
  mp2.pdf          |  Bin 0 -> 690502 bytes
  mp2_footer.ipynb |  108 ++
  mp2_header.ipynb |   53 +
  mp2_strato.ipynb | 2001 +++++++++++++++++++++++++++
  mp2_strato.pdf   |  Bin 0 -> 517355 bytes
- 6 files changed, 6212 insertions(+)
+ 7 files changed, 6401 insertions(+), 3 deletions(-)
 2026-04-04 b8bb756 mp2: updated compile script
 
  compile_mp2.py | 21 +++++++++++++++------
