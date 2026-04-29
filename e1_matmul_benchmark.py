@@ -17,7 +17,7 @@ import pyopencl as cl
 import matplotlib.pyplot as plt
 
 N         = 1024      # matrix dimension (N x N)
-TILE_SIZE = 16        # must divide N; tile^2 <= max_work_group_size
+TILE_SIZE = 8
 RUNS      = 3         # median of this many kernel launches
 
 HERE = Path(__file__).parent
